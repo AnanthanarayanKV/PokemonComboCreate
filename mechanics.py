@@ -21,15 +21,17 @@ TYPE_CHART = {
 
 def damage_calculator(attack, defend):
     multiplier = 1.0
+    attack = attack.lower()
 
     if attack not in TYPE_CHART:
         return 1.0
 
-    if isinstance(defend, str):
-        defend = [defend]
+    # Ensure defend is a list even if a single string is passed
+    target_types = [defend] if isinstance(defend, str) else defend
 
-    for def_type in defend:
-        mod = TYPE_CHART[attack].get(def_type, 1.0)
+    for def_type in target_types:
+        # .get(key, default) prevents the code from crashing if a type is missing
+        mod = TYPE_CHART[attack].get(def_type.lower(), 1.0)
         multiplier *= mod
 
     return multiplier

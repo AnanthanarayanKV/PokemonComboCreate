@@ -26,13 +26,17 @@ def get_pokemon(id):
         return "Error: Pokemon not found"
     
 
-def get_and_save_pokemon(start,end):
+def get_and_save_pokemon(start, end):
     pokemons = []
+    for i in range(start, end + 1):
+        result = get_pokemon(i)
+        if isinstance(result, dict): # Only add if it's a valid dictionary
+            pokemons.append(result)
+    
+    if not pokemons:
+        print("No data found.")
+        return
 
-    print(f"Harvesting data from ID {start} to {end}")
-    for i in range(start,end+1):
-        pokemons.append(get_pokemon(i))
-        time.sleep(0.1)
     keys = pokemons[0].keys()
 
     with open('pokemon.csv','w', newline='') as output_file:
