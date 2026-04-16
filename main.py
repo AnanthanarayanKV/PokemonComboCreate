@@ -1,58 +1,58 @@
-import requests
-import requests
 import pandas as pd
 from mechanics import damage_calculator
 from gym import gym_data
 
-def get_pokemon_data(name_or_id):
-    url = f"https://pokeapi.co/api/v2/pokemon/{name_or_id}"
-    res = requests.get(url)
-    if res.status_code != 200: return None
-    data = res.json()
-    
-    moves = []
-    for m in data["moves"]:
-        for version in m["version_group_details"]:
-            if version["version_group"]["name"] == "firered-leafgreen":
-                if version["move_learn_method"]["name"] == "level-up":
-                    moves.append(m["move"]["name"])
-
-    return {
-        "id": data["id"],
-        "name": data["name"],
-        "types": [t["type"]["name"] for t in data["types"]],
-        "moves": list(set(moves)),
-        "stats": {s["stat"]["name"]: s["base_stat"] for s in data["stats"]}
-    }
-
-def recommend_team(gym_name):
+def find_ultimate_counter(gym_name):
     gym = gym_data[gym_name]
-    leader_pokemon = [get_pokemon_data(p) for p in gym["leader_team"]]
+    cap = gym["level_cap"] # This is 14 for Brock
     
-    recommendations = []
+    df = pd.read_csv('pokemon_data.csv')
+    df.columns = df.columns.str.strip().str.lower()
+    df['id'] = df['id'].astype(int)
     
-    print(f"Analyzing counters available for {gym_name}...")
-    
-    for p_id in gym["available_ids"]:
-        candidate = get_pokemon_data(p_id)
-        if not candidate: continue
+    available_df = df[df['id'].isin(gym['available_ids'])].copy()
+    all_results = []
+
+    for _, row in available_df.iterrows():
+        p_id = row['id']
+
+        # --- NEW: EVOLUTION FILTER ---
+        # If the level cap is low (like Brock), we remove Pokemon that 
+        # haven't evolved yet.
+        if cap < 16:
+            # IDs of Mid/Final stage Pokemon available early
+            # 2: Ivysaur, 3: Venusaur, 5: Charmeleon, 6: Charizard, 
+            # 8: Wartortle, 9: Blastoise, 11: Metapod, 12: Butterfree...
+            invalid_early = [2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17, 18, 22]
+            if p_id in invalid_early:
+                continue
         
+        elif cap < 32:
+            # For Misty/Surge, we allow Mid-stages (Ivysaur) but not Finals (Venusaur)
+            invalid_mid = [3, 6, 9]
+            if p_id in invalid_mid:
+                continue
+        # -----------------------------
+
         score = 0
-        for p in leader_pokemon:
-            for l_type in p["types"]:
-                score -= damage_calculator(l_type, candidate["types"])
-            
-            for c_type in candidate["types"]:
-                score += (damage_calculator(c_type, p["types"]) * 2)
+        raw_types = row['types']
+        my_types = [t.strip() for t in raw_types.split(',')] if isinstance(raw_types, str) else [raw_types]
         
-        recommendations.append({"name": candidate["name"], "score": score})
+        for leader_pkmn in gym["leader_team"]:
+            target_types = leader_pkmn["types"]
+            for my_t in my_types:
+                score += (damage_calculator(my_t, target_types) * 10)
+            for enemy_t in target_types:
+                score -= (damage_calculator(enemy_t, my_types) * 5)
 
-    # Sort and show top 5
-    top_5 = sorted(recommendations, key=lambda x: x['score'], reverse=True)[:10]
-    
-    print(f"\n--- Top 5 Recommended for {gym_name} ---")
-    for i, rec in enumerate(top_5, 1):
-        print(f"{i}. {rec['name'].capitalize()} (Score: {rec['score']})")
+        all_results.append({
+            "name": row['name'],
+            "score": score,
+            "types": raw_types
+        })
 
-# Run the tool 
-recommend_team("Brock")
+    sorted_team = sorted(all_results, key=lambda x: x['score'], reverse=True)
+    return sorted_team[:6]
+
+out = pd.DataFrame(find_ultimate_counter("Brock"))
+print(out)
