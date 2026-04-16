@@ -1,4 +1,4 @@
-GYMS = {
+gym_data = {
     "Brock": {
         "leader_team": ["geodude", "onix"],
         "available_ids": list(range(1, 22)) + [25, 29, 32, 56, 161] 

@@ -1,45 +1,58 @@
-import pandas as pd
 import requests
+import requests
+import pandas as pd
+from mechanics import damage_calculator
+from gym import gym_data
 
 def get_pokemon_data(name_or_id):
     url = f"https://pokeapi.co/api/v2/pokemon/{name_or_id}"
     res = requests.get(url)
-    if res.status_code != 200: 
-        return None
-    
+    if res.status_code != 200: return None
     data = res.json()
     
-    # Get unique level-up moves for FireRed/LeafGreen
-    moves = {
-        m["move"]["name"]
-        for m in data["moves"]
-        for version in m["version_group_details"]
-        if version["version_group"]["name"] == "firered-leafgreen"
-        and version["move_learn_method"]["name"] == "level-up"
-    }
+    moves = []
+    for m in data["moves"]:
+        for version in m["version_group_details"]:
+            if version["version_group"]["name"] == "firered-leafgreen":
+                if version["move_learn_method"]["name"] == "level-up":
+                    moves.append(m["move"]["name"])
 
-    # Flatten the data for a clean CSV row
     return {
         "id": data["id"],
         "name": data["name"],
-        "types": ", ".join([t["type"]["name"] for t in data["types"]]),
-        "moves": ", ".join(list(moves)),
-        # Spread stats into individual columns
-        **{s["stat"]["name"]: s["base_stat"] for s in data["stats"]}
+        "types": [t["type"]["name"] for t in data["types"]],
+        "moves": list(set(moves)),
+        "stats": {s["stat"]["name"]: s["base_stat"] for s in data["stats"]}
     }
 
-# 1. Collect all data in a list first
-pokemon_list = []
-print("Fetching Pokémon data...")
+def recommend_team(gym_name):
+    gym = gym_data[gym_name]
+    leader_pokemon = [get_pokemon_data(p) for p in gym["leader_team"]]
+    
+    recommendations = []
+    
+    print(f"Analyzing counters available for {gym_name}...")
+    
+    for p_id in gym["available_ids"]:
+        candidate = get_pokemon_data(p_id)
+        if not candidate: continue
+        
+        score = 0
+        for p in leader_pokemon:
+            for l_type in p["types"]:
+                score -= damage_calculator(l_type, candidate["types"])
+            
+            for c_type in candidate["types"]:
+                score += (damage_calculator(c_type, p["types"]) * 2)
+        
+        recommendations.append({"name": candidate["name"], "score": score})
 
-for i in range(1, 152):  # 151 is Mew
-    pokemon = get_pokemon_data(i)
-    if pokemon:
-        pokemon_list.append(pokemon)
+    # Sort and show top 5
+    top_5 = sorted(recommendations, key=lambda x: x['score'], reverse=True)[:10]
+    
+    print(f"\n--- Top 5 Recommended for {gym_name} ---")
+    for i, rec in enumerate(top_5, 1):
+        print(f"{i}. {rec['name'].capitalize()} (Score: {rec['score']})")
 
-# 2. Create the DataFrame once
-df = pd.DataFrame(pokemon_list)
-
-# 3. Save to CSV once
-df.to_csv("pokemon_firered_data.csv", index=False)
-print("Done! Data saved to pokemon_firered_data.csv")
+# Run the tool 
+recommend_team("Brock")
