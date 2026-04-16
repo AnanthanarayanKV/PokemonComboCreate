@@ -1,0 +1,152 @@
+id,name,types,moves,hp,attack,defense,special-attack,special-defense,speed
+1,bulbasaur,"grass, poison","sleep-powder, synthesis, leech-seed, vine-whip, razor-leaf, sweet-scent, tackle, poison-powder, growth, growl, solar-beam",45,49,49,65,65,45
+2,ivysaur,"grass, poison","sleep-powder, synthesis, leech-seed, vine-whip, razor-leaf, sweet-scent, tackle, poison-powder, growth, growl, solar-beam",60,62,63,80,80,60
+3,venusaur,"grass, poison","sleep-powder, synthesis, leech-seed, vine-whip, razor-leaf, sweet-scent, tackle, poison-powder, growth, growl, solar-beam",80,82,83,100,100,80
+4,charmander,fire,"slash, fire-spin, dragon-rage, scratch, flamethrower, metal-claw, ember, scary-face, smokescreen, growl",39,52,43,60,50,65
+5,charmeleon,fire,"slash, fire-spin, dragon-rage, scratch, flamethrower, metal-claw, ember, scary-face, smokescreen, growl",58,64,58,80,65,80
+6,charizard,"fire, flying","slash, fire-spin, scratch, flamethrower, dragon-rage, metal-claw, ember, scary-face, heat-wave, wing-attack, smokescreen, growl",78,84,78,109,85,100
+7,squirtle,water,"rain-dance, protect, water-gun, tackle, skull-bash, bite, bubble, tail-whip, rapid-spin, withdraw, hydro-pump",44,48,65,50,64,43
+8,wartortle,water,"rain-dance, protect, water-gun, tackle, skull-bash, bite, bubble, tail-whip, rapid-spin, withdraw, hydro-pump",59,63,80,65,80,58
+9,blastoise,water,"rain-dance, protect, water-gun, tackle, skull-bash, bite, bubble, tail-whip, rapid-spin, withdraw, hydro-pump",79,83,100,85,105,78
+10,caterpie,bug,"string-shot, tackle",45,30,35,20,20,45
+11,metapod,bug,harden,50,20,55,25,25,30
+12,butterfree,"bug, flying","psybeam, sleep-powder, silver-wind, gust, whirlwind, safeguard, stun-spore, confusion, poison-powder, supersonic",60,45,50,90,80,70
+13,weedle,"bug, poison","string-shot, poison-sting",40,35,30,20,20,50
+14,kakuna,"bug, poison",harden,45,25,50,25,25,35
+15,beedrill,"bug, poison","fury-attack, agility, endeavor, focus-energy, twineedle, rage, pursuit, pin-missile",65,90,40,45,80,75
+16,pidgey,"normal, flying","quick-attack, agility, gust, whirlwind, feather-dance, tackle, sand-attack, mirror-move, wing-attack",40,45,40,35,35,56
+17,pidgeotto,"normal, flying","quick-attack, agility, gust, whirlwind, feather-dance, tackle, sand-attack, mirror-move, wing-attack",63,60,55,50,50,71
+18,pidgeot,"normal, flying","quick-attack, agility, gust, whirlwind, feather-dance, tackle, sand-attack, mirror-move, wing-attack",83,80,75,70,70,101
+19,rattata,normal,"quick-attack, endeavor, focus-energy, hyper-fang, tackle, pursuit, tail-whip, super-fang",30,56,35,25,35,72
+20,raticate,normal,"quick-attack, endeavor, hyper-fang, tackle, scary-face, pursuit, tail-whip, super-fang",55,81,60,50,70,97
+21,spearow,"normal, flying","leer, fury-attack, agility, aerial-ace, mirror-move, drill-peck, pursuit, peck, growl",40,60,30,31,31,70
+22,fearow,"normal, flying","leer, fury-attack, agility, mirror-move, drill-peck, pursuit, peck, growl",65,90,65,61,61,100
+23,ekans,poison,"leer, screech, wrap, stockpile, spit-up, haze, glare, swallow, poison-sting, acid, bite",35,60,44,40,54,55
+24,arbok,poison,"leer, screech, wrap, stockpile, spit-up, haze, glare, swallow, poison-sting, acid, bite",60,95,69,65,79,80
+25,pikachu,electric,"quick-attack, agility, slam, thunder-wave, tail-whip, double-team, thunder, light-screen, thunder-shock, thunderbolt, growl",35,55,40,50,50,90
+26,raichu,electric,"tail-whip, thunderbolt, quick-attack, thunder-shock",60,90,55,90,80,110
+27,sandshrew,ground,"swift, slash, sandstorm, defense-curl, scratch, poison-sting, sand-attack, sand-tomb, fury-swipes",50,75,85,20,30,40
+28,sandslash,ground,"swift, slash, sandstorm, defense-curl, scratch, poison-sting, sand-attack, sand-tomb, fury-swipes",75,100,110,45,55,65
+29,nidoran-f,poison,"double-kick, scratch, flatter, helping-hand, bite, poison-sting, tail-whip, fury-swipes, crunch, growl",55,47,52,40,40,41
+30,nidorina,poison,"double-kick, scratch, flatter, helping-hand, bite, poison-sting, tail-whip, fury-swipes, crunch, growl",70,62,67,55,55,56
+31,nidoqueen,"poison, ground","superpower, body-slam, double-kick, scratch, poison-sting, tail-whip",90,92,87,75,85,76
+32,nidoran-m,poison,"leer, fury-attack, double-kick, horn-drill, focus-energy, helping-hand, poison-sting, peck, horn-attack, flatter",46,57,40,40,40,50
+33,nidorino,poison,"leer, fury-attack, double-kick, horn-drill, focus-energy, helping-hand, poison-sting, peck, horn-attack, flatter",61,72,57,55,55,65
+34,nidoking,"poison, ground","double-kick, focus-energy, thrash, poison-sting, peck, megahorn",81,102,77,85,75,85
+35,clefairy,fairy,"meteor-mash, encore, double-slap, minimize, defense-curl, moonlight, cosmic-power, follow-me, metronome, pound, growl, light-screen, sing",70,45,48,60,65,35
+36,clefable,fairy,"minimize, metronome, sing, double-slap",95,70,73,95,90,60
+37,vulpix,fire,"quick-attack, fire-spin, roar, flamethrower, confuse-ray, safeguard, grudge, ember, imprison, tail-whip, will-o-wisp",38,41,40,50,65,65
+38,ninetales,fire,"quick-attack, fire-spin, safeguard, confuse-ray, ember",73,76,75,81,100,100
+39,jigglypuff,"normal, fairy","defense-curl, body-slam, hyper-voice, rest, sing, rollout, disable, double-edge, pound, double-slap, mimic",115,45,20,45,25,20
+40,wigglytuff,"normal, fairy","disable, sing, defense-curl, double-slap",140,70,45,85,50,45
+41,zubat,"poison, flying","poison-fang, haze, astonish, mean-look, confuse-ray, bite, leech-life, air-cutter, supersonic, wing-attack",40,45,35,30,40,55
+42,golbat,"poison, flying","screech, poison-fang, haze, astonish, mean-look, confuse-ray, bite, leech-life, air-cutter, supersonic, wing-attack",75,80,70,65,75,90
+43,oddish,"grass, poison","sleep-powder, moonlight, absorb, sweet-scent, stun-spore, petal-dance, acid, poison-powder",45,50,55,75,65,30
+44,gloom,"grass, poison","sleep-powder, moonlight, absorb, sweet-scent, stun-spore, petal-dance, acid, poison-powder",60,65,70,85,75,40
+45,vileplume,"grass, poison","absorb, aromatherapy, stun-spore, petal-dance, mega-drain",75,80,85,110,90,50
+46,paras,"bug, grass","spore, slash, giga-drain, scratch, aromatherapy, stun-spore, leech-life, poison-powder, growth",35,70,55,45,55,25
+47,parasect,"bug, grass","spore, slash, giga-drain, scratch, aromatherapy, stun-spore, leech-life, poison-powder, growth",60,95,80,60,80,30
+48,venonat,"bug, poison","psybeam, sleep-powder, psychic, stun-spore, disable, tackle, leech-life, confusion, poison-powder, supersonic, foresight",60,55,50,40,55,45
+49,venomoth,"bug, poison","psybeam, sleep-powder, silver-wind, gust, psychic, stun-spore, disable, tackle, leech-life, confusion, poison-powder, supersonic, foresight",70,65,60,90,75,90
+50,diglett,ground,"sand-attack, earthquake, slash, magnitude, scratch, dig, mud-slap, fissure, fury-swipes, growl",10,55,25,35,45,95
+51,dugtrio,ground,"sand-attack, earthquake, slash, magnitude, scratch, dig, tri-attack, mud-slap, fissure, sand-tomb, fury-swipes, growl",35,100,50,50,70,120
+52,meowth,normal,"screech, slash, fake-out, pay-day, scratch, feint-attack, bite, swagger, fury-swipes, growl",40,45,35,40,40,90
+53,persian,normal,"screech, slash, fake-out, pay-day, scratch, feint-attack, bite, swagger, fury-swipes, growl",65,70,60,65,65,115
+54,psyduck,water,"screech, scratch, psych-up, disable, tail-whip, confusion, water-sport, fury-swipes, hydro-pump",50,52,48,65,50,55
+55,golduck,water,"screech, scratch, psych-up, disable, tail-whip, confusion, water-sport, fury-swipes, hydro-pump",80,82,78,95,80,85
+56,mankey,fighting,"leer, low-kick, screech, karate-chop, scratch, focus-energy, seismic-toss, cross-chop, thrash, swagger, fury-swipes",40,80,35,35,45,70
+57,primeape,fighting,"leer, low-kick, screech, karate-chop, scratch, focus-energy, seismic-toss, cross-chop, thrash, rage, swagger, fury-swipes",65,105,60,60,70,95
+58,growlithe,fire,"leer, agility, roar, flamethrower, ember, take-down, bite, helping-hand, odor-sleuth, flame-wheel",55,70,45,70,50,60
+59,arcanine,fire,"roar, ember, extreme-speed, bite, odor-sleuth",90,110,80,100,80,95
+60,poliwag,water,"rain-dance, body-slam, water-gun, hypnosis, bubble, belly-drum, double-slap, hydro-pump",40,50,40,40,40,90
+61,poliwhirl,water,"rain-dance, body-slam, water-gun, hypnosis, bubble, belly-drum, double-slap, hydro-pump",65,65,65,50,50,90
+62,poliwrath,"water, fighting","submission, water-gun, hypnosis, mind-reader, double-slap",90,95,95,70,90,70
+63,abra,psychic,teleport,25,20,15,105,55,90
+64,kadabra,psychic,"psybeam, recover, future-sight, psychic, reflect, disable, role-play, trick, confusion, kinesis, teleport",40,35,30,120,70,105
+65,alakazam,psychic,"psybeam, calm-mind, recover, future-sight, psychic, reflect, disable, trick, confusion, kinesis, teleport",55,50,45,135,95,120
+66,machop,fighting,"leer, low-kick, submission, vital-throw, karate-chop, focus-energy, seismic-toss, cross-chop, dynamic-punch, revenge, scary-face, foresight",70,80,50,35,35,35
+67,machoke,fighting,"leer, low-kick, submission, vital-throw, karate-chop, focus-energy, seismic-toss, cross-chop, dynamic-punch, revenge, scary-face, foresight",80,100,70,50,60,45
+68,machamp,fighting,"leer, low-kick, submission, vital-throw, karate-chop, focus-energy, seismic-toss, cross-chop, dynamic-punch, revenge, scary-face, foresight",90,130,80,65,85,55
+69,bellsprout,"grass, poison","wrap, sleep-powder, slam, vine-whip, razor-leaf, sweet-scent, stun-spore, acid, poison-powder, growth",50,75,35,70,30,40
+70,weepinbell,"grass, poison","wrap, sleep-powder, slam, vine-whip, razor-leaf, sweet-scent, stun-spore, acid, poison-powder, growth",65,90,50,85,45,55
+71,victreebel,"grass, poison","stockpile, sleep-powder, spit-up, vine-whip, razor-leaf, sweet-scent, swallow",80,105,65,100,70,70
+72,tentacool,"water, poison","screech, wrap, barrier, bubble-beam, poison-sting, acid, constrict, supersonic, hydro-pump",40,40,35,50,100,70
+73,tentacruel,"water, poison","screech, wrap, barrier, bubble-beam, poison-sting, acid, constrict, supersonic, hydro-pump",80,70,65,80,120,100
+74,geodude,"rock, ground","self-destruct, earthquake, defense-curl, magnitude, rock-blast, rollout, double-edge, explosion, tackle, mud-sport, rock-throw",40,80,100,30,30,20
+75,graveler,"rock, ground","self-destruct, earthquake, defense-curl, magnitude, rock-blast, rollout, double-edge, explosion, tackle, mud-sport, rock-throw",55,95,115,45,45,35
+76,golem,"rock, ground","self-destruct, earthquake, defense-curl, magnitude, rock-blast, rollout, double-edge, explosion, tackle, mud-sport, rock-throw",80,120,130,55,65,45
+77,ponyta,fire,"quick-attack, fire-blast, fire-spin, agility, ember, bounce, take-down, stomp, tail-whip, growl",50,85,55,65,65,90
+78,rapidash,fire,"fury-attack, quick-attack, fire-spin, agility, fire-blast, ember, bounce, take-down, stomp, tail-whip, growl",65,100,70,80,80,105
+79,slowpoke,"water, psychic","amnesia, curse, headbutt, psychic, psych-up, disable, water-gun, tackle, confusion, growl, yawn",90,65,65,40,40,15
+80,slowbro,"water, psychic","amnesia, curse, headbutt, psychic, psych-up, disable, water-gun, tackle, confusion, withdraw, growl, yawn",95,75,110,100,80,30
+81,magnemite,"electric, steel","screech, swift, metal-sound, lock-on, spark, thunder-wave, sonic-boom, tackle, thunder-shock, zap-cannon, supersonic",25,35,70,95,55,45
+82,magneton,"electric, steel","screech, metal-sound, lock-on, spark, thunder-wave, sonic-boom, tri-attack, tackle, thunder-shock, zap-cannon, supersonic",50,60,95,120,70,70
+83,farfetchd,"normal, flying","leer, swords-dance, fury-attack, slash, agility, fury-cutter, sand-attack, peck, knock-off, false-swipe",52,90,55,58,62,60
+84,doduo,"normal, flying","fury-attack, agility, uproar, tri-attack, rage, drill-peck, pursuit, peck, growl",35,85,45,35,35,75
+85,dodrio,"normal, flying","fury-attack, agility, uproar, tri-attack, rage, drill-peck, pursuit, peck, growl",60,110,70,60,60,110
+86,seel,water,"headbutt, rest, safeguard, icy-wind, aurora-beam, take-down, ice-beam, growl",65,45,55,45,70,45
+87,dewgong,"water, ice","headbutt, rest, safeguard, icy-wind, signal-beam, sheer-cold, aurora-beam, take-down, ice-beam, growl",90,70,80,70,95,70
+88,grimer,poison,"screech, sludge-bomb, minimize, memento, disable, poison-gas, pound, harden, acid-armor, sludge",80,80,50,40,50,25
+89,muk,poison,"screech, sludge-bomb, minimize, memento, disable, poison-gas, pound, harden, acid-armor, sludge",105,105,75,65,100,50
+90,shellder,water,"leer, ice-beam, protect, clamp, tackle, aurora-beam, icicle-spear, withdraw, supersonic",30,65,100,45,25,40
+91,cloyster,"water, ice","spikes, protect, aurora-beam, withdraw, supersonic, spike-cannon",50,95,180,85,45,70
+92,gastly,"ghost, poison","lick, curse, shadow-ball, spite, night-shade, mean-look, confuse-ray, dream-eater, destiny-bond, hypnosis, nightmare",30,35,30,100,35,80
+93,haunter,"ghost, poison","lick, curse, shadow-ball, spite, night-shade, mean-look, confuse-ray, dream-eater, destiny-bond, hypnosis, nightmare, shadow-punch",45,50,45,115,55,95
+94,gengar,"ghost, poison","lick, curse, shadow-ball, spite, night-shade, mean-look, confuse-ray, dream-eater, destiny-bond, hypnosis, nightmare, shadow-punch",60,65,60,130,75,110
+95,onix,"rock, ground","screech, sandstorm, slam, dragon-breath, bind, double-edge, tackle, rage, sand-tomb, harden, iron-tail, rock-throw",35,45,160,30,45,70
+96,drowzee,psychic,"headbutt, future-sight, psychic, psych-up, disable, poison-gas, pound, hypnosis, meditate, swagger, confusion",60,48,45,43,90,42
+97,hypno,psychic,"headbutt, future-sight, psychic, psych-up, disable, poison-gas, pound, hypnosis, meditate, swagger, nightmare, confusion",85,73,70,73,115,67
+98,krabby,water,"leer, mud-shot, crabhammer, flail, protect, guillotine, vice-grip, stomp, bubble, harden",30,105,90,25,25,50
+99,kingler,water,"leer, mud-shot, crabhammer, flail, protect, guillotine, metal-claw, vice-grip, stomp, bubble, harden",55,130,115,50,50,75
+100,voltorb,electric,"screech, swift, self-destruct, spark, sonic-boom, rollout, explosion, tackle, charge, light-screen, mirror-coat",40,30,50,55,55,100
+101,electrode,electric,"screech, swift, self-destruct, spark, sonic-boom, rollout, explosion, tackle, charge, light-screen, mirror-coat",60,50,70,80,80,150
+102,exeggcute,"grass, psychic","sleep-powder, leech-seed, barrage, uproar, stun-spore, reflect, hypnosis, confusion, poison-powder, solar-beam",60,40,80,60,45,40
+103,exeggutor,"grass, psychic","egg-bomb, barrage, hypnosis, stomp, confusion",95,95,85,125,75,55
+104,cubone,ground,"leer, bone-rush, headbutt, focus-energy, thrash, double-edge, rage, bone-club, tail-whip, bonemerang, growl, false-swipe",50,50,95,40,50,35
+105,marowak,ground,"leer, bone-rush, headbutt, focus-energy, thrash, double-edge, rage, bone-club, tail-whip, bonemerang, growl, false-swipe",60,80,110,50,80,45
+106,hitmonlee,fighting,"high-jump-kick, double-kick, jump-kick, focus-energy, endure, revenge, meditate, mega-kick, rolling-kick, reversal, brick-break, mind-reader, foresight",50,120,53,35,110,87
+107,hitmonchan,fighting,"agility, mega-punch, sky-uppercut, mach-punch, detect, ice-punch, revenge, counter, pursuit, thunder-punch, comet-punch, fire-punch",50,105,79,35,110,76
+108,lickitung,normal,"screech, lick, wrap, defense-curl, slam, disable, stomp, refresh, knock-off, supersonic",90,55,75,60,75,30
+109,koffing,poison,"self-destruct, haze, smog, destiny-bond, memento, poison-gas, explosion, tackle, smokescreen, sludge",40,65,95,60,45,35
+110,weezing,poison,"self-destruct, haze, smog, destiny-bond, memento, poison-gas, explosion, tackle, smokescreen, sludge",65,90,120,85,70,60
+111,rhyhorn,"ground, rock","fury-attack, earthquake, horn-drill, rock-blast, scary-face, take-down, stomp, tail-whip, horn-attack, megahorn",80,85,95,30,30,25
+112,rhydon,"ground, rock","fury-attack, earthquake, horn-drill, rock-blast, scary-face, take-down, stomp, tail-whip, horn-attack, megahorn",105,130,120,45,45,40
+113,chansey,normal,"egg-bomb, soft-boiled, double-slap, minimize, defense-curl, sing, double-edge, pound, light-screen, tail-whip, refresh, growl",250,5,5,35,105,50
+114,tangela,grass,"sleep-powder, absorb, slam, vine-whip, stun-spore, ingrain, bind, mega-drain, constrict, poison-powder, growth, tickle",65,55,115,100,40,60
+115,kangaskhan,normal,"leer, reversal, fake-out, mega-punch, endure, bite, rage, tail-whip, comet-punch, dizzy-punch",105,95,80,40,80,90
+116,horsea,water,"leer, dragon-dance, agility, twister, water-gun, bubble, smokescreen, hydro-pump",30,40,70,70,25,60
+117,seadra,water,"leer, dragon-dance, agility, twister, water-gun, bubble, smokescreen, hydro-pump",55,65,95,95,45,85
+118,goldeen,water,"fury-attack, water-sport, agility, flail, horn-drill, waterfall, tail-whip, peck, horn-attack, megahorn, supersonic",45,67,60,35,50,63
+119,seaking,water,"fury-attack, water-sport, agility, flail, horn-drill, waterfall, tail-whip, peck, horn-attack, megahorn, supersonic",80,92,65,65,80,68
+120,staryu,water,"hydro-pump, swift, recover, camouflage, cosmic-power, minimize, water-gun, tackle, light-screen, rapid-spin, harden, bubble-beam",30,45,55,70,55,85
+121,starmie,"water, psychic","swift, recover, confuse-ray, water-gun, rapid-spin",60,75,85,100,85,115
+122,mr-mime,"psychic, fairy","psybeam, encore, barrier, safeguard, psychic, reflect, role-play, baton-pass, substitute, meditate, trick, recycle, light-screen, confusion, magical-leaf, double-slap",40,45,65,100,120,90
+123,scyther,"bug, flying","leer, swords-dance, quick-attack, slash, agility, focus-energy, fury-cutter, double-team, pursuit, wing-attack, false-swipe",70,110,80,55,80,105
+124,jynx,"ice, psychic","lick, perish-song, body-slam, mean-look, fake-tears, ice-punch, pound, lovely-kiss, powder-snow, double-slap, blizzard",65,50,35,115,95,95
+125,electabuzz,electric,"leer, screech, swift, quick-attack, thunder, light-screen, thunderbolt, thunder-punch",65,83,57,95,85,105
+126,magmar,fire,"leer, fire-blast, smog, flamethrower, confuse-ray, ember, sunny-day, smokescreen, fire-punch",65,95,57,100,85,93
+127,pinsir,bug,"submission, swords-dance, guillotine, focus-energy, seismic-toss, vice-grip, bind, revenge, harden, brick-break",65,125,100,55,70,85
+128,tauros,normal,"rest, thrash, tackle, take-down, rage, scary-face, swagger, tail-whip, horn-attack, pursuit",75,100,95,40,70,110
+129,magikarp,water,"tackle, splash, flail",20,10,55,15,20,80
+130,gyarados,"water, flying","leer, rain-dance, dragon-dance, dragon-rage, twister, thrash, hyper-beam, bite, hydro-pump",95,125,79,60,100,81
+131,lapras,"water, ice","rain-dance, perish-song, body-slam, sheer-cold, safeguard, confuse-ray, water-gun, growl, mist, ice-beam, sing, hydro-pump",130,85,80,85,95,60
+132,ditto,normal,transform,48,48,48,48,48,48
+133,eevee,normal,"quick-attack, baton-pass, tackle, take-down, bite, helping-hand, sand-attack, tail-whip, growl",55,55,50,45,65,55
+134,vaporeon,water,"quick-attack, haze, water-gun, tackle, aurora-beam, bite, helping-hand, sand-attack, tail-whip, acid-armor, hydro-pump",130,65,60,110,95,65
+135,jolteon,electric,"quick-attack, agility, double-kick, thunder-wave, tackle, thunder, helping-hand, sand-attack, tail-whip, thunder-shock, pin-missile",65,65,60,110,95,130
+136,flareon,fire,"leer, quick-attack, fire-spin, smog, flamethrower, ember, tackle, helping-hand, bite, sand-attack, tail-whip",65,130,60,95,110,65
+137,porygon,normal,"psybeam, sharpen, recover, agility, conversion, lock-on, tri-attack, tackle, conversion-2, recycle, zap-cannon",65,60,70,85,75,40
+138,omanyte,"rock, water","leer, mud-shot, protect, ancient-power, tickle, water-gun, bite, constrict, withdraw, hydro-pump",35,40,100,90,55,35
+139,omastar,"rock, water","leer, spike-cannon, mud-shot, protect, ancient-power, tickle, water-gun, bite, constrict, withdraw, hydro-pump",70,60,125,115,70,55
+140,kabuto,"rock, water","leer, mud-shot, metal-sound, absorb, ancient-power, scratch, mega-drain, sand-attack, endure, harden",30,80,90,55,45,55
+141,kabutops,"rock, water","leer, mud-shot, slash, metal-sound, absorb, ancient-power, scratch, fury-cutter, mega-drain, sand-attack, endure, harden",60,115,105,65,70,80
+142,aerodactyl,"rock, flying","agility, ancient-power, hyper-beam, scary-face, take-down, bite, supersonic, wing-attack",80,105,65,60,75,130
+143,snorlax,normal,"amnesia, defense-curl, body-slam, block, headbutt, rest, covet, rollout, hyper-beam, tackle, sleep-talk, belly-drum, snore, yawn",160,110,65,65,110,30
+144,articuno,"ice, flying","agility, gust, sheer-cold, reflect, powder-snow, mist, mind-reader, ice-beam, blizzard",90,85,100,95,125,85
+145,zapdos,"electric, flying","agility, thunder-wave, detect, thunder, light-screen, drill-peck, thunder-shock, charge, peck",90,90,85,125,90,100
+146,moltres,"fire, flying","agility, fire-spin, flamethrower, safeguard, sky-attack, ember, heat-wave, endure, wing-attack",90,100,90,125,85,90
+147,dratini,dragon,"leer, wrap, agility, slam, thunder-wave, dragon-rage, safeguard, twister, hyper-beam, outrage",41,64,45,50,50,50
+148,dragonair,dragon,"leer, wrap, agility, slam, thunder-wave, dragon-rage, safeguard, twister, hyper-beam, outrage",61,84,65,70,70,70
+149,dragonite,"dragon, flying","leer, wrap, agility, slam, thunder-wave, dragon-rage, safeguard, twister, hyper-beam, outrage, wing-attack",91,134,95,100,100,80
+150,mewtwo,psychic,"amnesia, swift, recover, barrier, future-sight, safeguard, psychic, psych-up, disable, confusion, mist",106,110,90,154,90,130
+151,mew,psychic,"mega-punch, ancient-power, psychic, transform, metronome, pound",100,100,100,100,100,100

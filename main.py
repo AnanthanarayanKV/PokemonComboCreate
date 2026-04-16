@@ -1,49 +1,45 @@
+import pandas as pd
 import requests
-import csv
-import time
-from mechanics import damage_calculator
 
-def get_pokemon(id):
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
-
-    response = requests.get(url)
-
-    if response.status_code ==200:
-        data = response.json()
-
-        specs = {
-            "name": data["name"],
-            "type": [t["type"]["name"] for t in data["types"]],
-            "hp": data["stats"][0]["base_stat"],
-            "attack": data["stats"][1]["base_stat"],
-            "defense": data["stats"][2]["base_stat"],
-            "S_attack": data["stats"][3]["base_stat"],
-            "S_defense": data["stats"][4]["base_stat"],
-            "speed": data["stats"][5]["base_stat"]
-        }
-        return specs
-    else:
-        return "Error: Pokemon not found"
+def get_pokemon_data(name_or_id):
+    url = f"https://pokeapi.co/api/v2/pokemon/{name_or_id}"
+    res = requests.get(url)
+    if res.status_code != 200: 
+        return None
     
-
-def get_and_save_pokemon(start, end):
-    pokemons = []
-    for i in range(start, end + 1):
-        result = get_pokemon(i)
-        if isinstance(result, dict): # Only add if it's a valid dictionary
-            pokemons.append(result)
+    data = res.json()
     
-    if not pokemons:
-        print("No data found.")
-        return
+    # Get unique level-up moves for FireRed/LeafGreen
+    moves = {
+        m["move"]["name"]
+        for m in data["moves"]
+        for version in m["version_group_details"]
+        if version["version_group"]["name"] == "firered-leafgreen"
+        and version["move_learn_method"]["name"] == "level-up"
+    }
 
-    keys = pokemons[0].keys()
+    # Flatten the data for a clean CSV row
+    return {
+        "id": data["id"],
+        "name": data["name"],
+        "types": ", ".join([t["type"]["name"] for t in data["types"]]),
+        "moves": ", ".join(list(moves)),
+        # Spread stats into individual columns
+        **{s["stat"]["name"]: s["base_stat"] for s in data["stats"]}
+    }
 
-    with open('pokemon.csv','w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(pokemons)
+# 1. Collect all data in a list first
+pokemon_list = []
+print("Fetching Pokémon data...")
 
-    print("Pokemon.csv is created")
+for i in range(1, 152):  # 151 is Mew
+    pokemon = get_pokemon_data(i)
+    if pokemon:
+        pokemon_list.append(pokemon)
 
-print(f"Fire vs Grass/Poison: {damage_calculator('fire', ['grass', 'poison'])}x")
+# 2. Create the DataFrame once
+df = pd.DataFrame(pokemon_list)
+
+# 3. Save to CSV once
+df.to_csv("pokemon_firered_data.csv", index=False)
+print("Done! Data saved to pokemon_firered_data.csv")
